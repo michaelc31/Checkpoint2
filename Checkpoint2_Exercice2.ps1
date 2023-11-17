@@ -47,7 +47,7 @@ foreach ($User in $Users)
     $Prenom = ManageAccentsAndCapitalLetters -String $User.prenom
     $Nom = ManageAccentsAndCapitalLetters -String $User.Nom
     $Name = "$Prenom.$Nom"
-    If (-not(Get-LocalUser -Name "$Prenom.$Nom" -ErrorAction SilentlyContinue))
+    If (-not(Get-LocalUser -Name "$Name" -ErrorAction SilentlyContinue))
     {
         $Pass = Random-Password -PasswordNeverExpires $true
         $Password = (ConvertTo-secureString $Pass -AsPlainText -Force )
@@ -63,7 +63,7 @@ foreach ($User in $Users)
         Log
         New-LocalUser @UserInfo 
         Add-LocalGroupMember -Group "Utilisateurs" -Member "$Name"
-        Write-Host "L'utilisateur $Prenom.$Nom a été crée et son mot de passe est $Pass"
+        Write-Host "L'utilisateur $Name a été crée et son mot de passe est $Pass"
     }
     else
     {
