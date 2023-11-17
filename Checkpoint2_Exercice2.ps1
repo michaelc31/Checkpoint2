@@ -60,13 +60,14 @@ foreach ($User in $Users)
             PasswordNeverExpires = $false
             Description = "$Description"
         }
-        Log
+        log -Path $FilePath content "creation utilisateur $Name"
         New-LocalUser @UserInfo 
         Add-LocalGroupMember -Group "Utilisateurs" -Member "$Name"
         Write-Host "L'utilisateur $Name a été crée et son mot de passe est $Pass"
     }
     else
     {
+        log -Path $FilePath content "utilisateur $Name existe deja"
         Write-Host "L'utilisateur $Name existe deja"
     }
 }
