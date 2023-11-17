@@ -66,7 +66,62 @@ Aucune le switch est un materiel auquel aucun reseau ou adresse IP n'est affecte
 
 ## Q.3.10 On souhaite mettre la configuration IP des ordinateurs en dynamique. Quelles sont les modifications possible ?
 
-
+### Fichier1
 ## Q.3.11 Sur le paquet N°5, quelle est l'adresse mac du matériel qui initialise la communication ? Déduis-en le nom du matériel.
 
+ladresse MAC source qui initialise la communication est 00:50:79:66:68:00 je peux en deduire qu'il s'agit d'une carte reseau du PC1
 
+## Q.3.12 Est-ce que la communication enregistrée dans cette capture a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+
+la communication enregistrée dans la capture a réussi car on voi bien la reussite de la requete ping et ca communique entre PC1 10.10.4.1 (00:50:79:66:68:00) et PC4 10.10.4.2 (00:50:79:66:68:03)
+
+## Q.3.13 Dans cette capture, à quel matériel correspond le request et le reply ? Donne le nom, l'adresse IP, et l'adresse mac de chaque materiel.
+
+dans cette capture, le request et le reply correspond a une requete ping ICMP, les materiel sont PC1 10.10.4.1 (00:50:79:66:68:00) et PC4 10.10.4.2 (00:50:79:66:68:03)
+
+## Q.3.14 Dans le paquet N°2, quel est le protocole encapsulé ? Quel est son rôle ?
+
+le protocole encapsule est le protocole ARP son role est permettre la communication entre des périphériques d'un réseau lorsque seuls les adresses IP sont connues
+
+## Q.3.15 Quels ont été les rôles des matériels A et B dans cette communication ?
+
+les roles des materiel A et B on étais simple l'un a fait un requete de ping l'autre a repondu
+
+### Fichier2
+## Q.3.16 Dans cette trame, qui initialise la communication ? Donne l'adresse IP ainsi que le nom du matériel.
+
+le materiel qui initialise la communication est 10.10.80.3 c'est la carte reseau d'un poste client PC3
+
+## Q.3.17 Quel est le protocole encapsulé ? Quel est son rôle ?
+
+le protocole encapsule est le protocole ICMP son role fournir les informations sur l'état du réseau, ainsi que pour signaler les erreurs rencontrées lors de la transmission des données 
+
+## Q.3.18 Est-ce que cette communication a réussi ? Si oui, indique entre quels matériel, si non indique pourquoi cela n'a pas fonctionné.
+
+la commmunication n'as pas été reussi car le ping s'effectue sur un autre reseau du coup pas de reponse
+
+## Q.3.19 Explique la ligne du paquet N° 2
+
+le ping ne s'effectuant pas c'est un retour de la passerelle par defaut qui reviens indiquant l'echecs de la communication
+
+## Q.3.20 Quels ont été les rôles des matériels A et B ?
+
+
+### Fichier3
+## Q.3.21 Dans cette trame, donne les noms et les adresses IP des matériels sources et destination.
+
+les adresse IP sont: 
+
+10.10.4.2  adresse source 
+
+172.16.5.253 adresse destionnation
+
+## Q.3.22 Quelles sont les adresses mac source et destination ? Qu'en déduis-tu ?
+
+adresse MAC sources ca:01:da:d2:00:1c
+
+adresse MAC destination ca:03:9e:ef:00:38
+
+## Q.3.23 A quel emplacement du réseau a été enregistré cette communication ?
+
+cette communication à été enregistré au niveau du routeur R2
